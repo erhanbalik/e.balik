@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist//css/style.css">
+    <!-- FONT ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>erhan balik</title>
 </head>
 <body class="light">
@@ -15,26 +17,40 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" class="whoami">Who am i</a></li>
+                    <li><a href="#" class="skilss">Skilss</a></li>
+                    <li><a href="#" class="projects">Projects</a></li>
+                    <li><a href="#" class="contact">Let's Contact</a></li>
                 </ul>
             </nav>
-            <div>
-                <button class="mode-changer">
-                    <img src="./assets/icons/moon.png" alt="mode">
-                </button>
+            <div class="settings">
                 <div class="dropdown-menu">
-                    <span>V</span>
+                    <span class="lang-text">EN</span>
                     <div class="dropdown-items">
-                        <a href="#" lang="english">ENG</a>
-                        <a href="#" lang="turkhis">TR</a>
+                        <a href="#" lang="en" class="active">EN</a>
+                        <a href="#" lang="tr">TR</a>
                     </div>
                 </div>
+                <button class="mode-changer">
+                    <i class="fa-solid fa-moon" onclick="toggleModeIcon(this)"></i>
+                </button>
             </div>
         </div>
     </header>
+    <section class="hero-section">
+        <div class="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <h1>Erhan BALIK</h1>
+                    <h2>Front-End Developer</h2>
+                    <a href="#"><i class="fa-brands fa-github"></i>Github</a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i>Resume</a>
+                </div>
+            </div>
+            <div class="hero-img"></div>
+        </div>
+    </section>
     <script src="/script.js"></script>
 </body>
 </html>
