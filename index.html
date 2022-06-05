@@ -17,18 +17,18 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#" class="whoami">Who am i</a></li>
-                    <li><a href="#" class="skilss">Skilss</a></li>
-                    <li><a href="#" class="projects">Projects</a></li>
-                    <li><a href="#" class="contact">Let's Contact</a></li>
+                    <li><a href="#whoami" class="whoami">Who am i</a></li>
+                    <li><a href="#skilss" class="skilss">Skilss</a></li>
+                    <li><a href="#projects" class="projects">Projects</a></li>
+                    <li><a href="#contact" class="contact">Let's Contact</a></li>
                 </ul>
             </nav>
             <div class="settings">
                 <div class="dropdown-menu">
                     <span class="lang-text">EN</span>
                     <div class="dropdown-items">
-                        <a href="#" lang="en" class="active">EN</a>
-                        <a href="#" lang="tr">TR</a>
+                        <p lang="en" class="active">EN</p>
+                        <p lang="tr">TR</p>
                     </div>
                 </div>
                 <button class="mode-changer">
@@ -43,8 +43,8 @@
                 <div class="hero-text">
                     <h1>Erhan BALIK</h1>
                     <h2>Front-End Developer</h2>
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/erhanbalik" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/erhan-balik-85a1a113a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     
                 </div>
                 <div class="tab-cont">
@@ -55,14 +55,14 @@
         </div>
     </section>
     <main>
-        <section class="whoami">
+        <section class="whoami" id="whoami">
             <div class="container">
                 <div class="section-title">
-                    <h3>Who am I</h3>
+                    <h3 class="whoami-title">Who am I</h3>
                 </div>
                 <div class="section-content">
                     <div class="whoami-text">
-                        <p>
+                        <p class="whoami-desc">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam, culpa ea molestias aliquid nihil quidem quis iste debitis a temporibus quam, excepturi animi, voluptatibus fugiat unde. Eveniet dolor incidunt laboriosam enim quaerat asperiores laudantium eligendi, temporibus voluptate minus quam ratione fugit soluta provident saepe voluptatem quas magni facere quidem tenetur. Non modi eligendi atque quam aliquam doloremque quasi aperiam ducimus sed nobis repellat rerum vitae dolor culpa et, saepe necessitatibus quisquam? Adipisci deleniti accusantium rerum veniam doloremque soluta aut, aliquid dolor fugit omnis atque facere sunt alias rem labore nam quae deserunt quos. Asperiores soluta ipsam dolores itaque voluptate!
                         </p>
                         <div class="social-icons">
@@ -76,10 +76,10 @@
             </div>
         </section>
     </main>
-    <section class="skilss-container">
+    <section class="skilss-container" id="skilss">
         <div class="container">
             <div class="section-title">
-                <h3>Skilss</h3>
+                <h3 class="skilss-title">Skilss</h3>
             </div>
             <div class="section-content">
                 <div class="skilss-img">
@@ -110,10 +110,10 @@
             </div>
         </div>
     </section>
-    <section class="projects-cont">
+    <section class="projects-cont" id="projects">
         <div class="container">
             <div class="section-title">
-                <h3>Projects</h3>
+                <h3 class="project-title">Projects</h3>
             </div>
             <div class="section-content">
                 <div class="card-container">
@@ -288,10 +288,16 @@
             </div>
         </div>
     </section>
-    <section class="contact-section">
+
+    <!-- ==========================CONTACT================================== -->
+    <section class="contact-section" id="contact">
         <div class="container">
             <div class="contact-info">
-                <h2>Let's Contact</h2>
+                <h2 class="contact-title">Let's Contact</h2>
+                <p>
+                    If you have any questions, please feel free to contact me.
+                </p>
+                
                 </div>
                 <div class="contact-form">
                     <form action="https://formsubmit.co/formsubmit.rdy8w@aleeas.com" method="POST"">
@@ -311,35 +317,32 @@
                         </div>
                         <button type="submit" class="submitBtn">Submit</button>
                     </form>
-                    <div class="contact-direct">
-                        <div class="contact-direct-item">
-                            <p>
-                                If you have any questions, please feel free to contact me.
-                            </p>
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>erhanbalik93@gmail.com</span>
-                        </div>
-                        </div>
                     </div>
     </section>
     <footer>
         <div class="container">
             <div class="footer-info">
                 <div class="footer-info-item">
-                    <p>
+                    <p class="footer-desc">
                         I am a Front-End Developer. I have experience in building web applications using
                         HTML5, CSS3 ,Javascript, ReactJS
                     </p>
                 </div>
+                <div class="footer-social-link">
+                    <a href="https://github.com/erhanbalik" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/erhan-balik-85a1a113a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
                 <div class="footer-info-item">
-                    <p>
-                        2021, Turkey
+                    <p class="footer-date">
+                        2022, Turkey
                     </p>
                 </div>
             </div>
         </div>
     </footer>
     <button onclick="scrollTopFuntion()" class="topBtn" id="scrollBtn"><i class="fa-solid fa-square-caret-up"></i></button>
+    <!-- JS -->
     <script src="/script.js"></script>
+    <script src="/langData.js"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+/* Breakpoint */
+/* VARIABLES */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +12,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px; }
 
+/* Themes */
 .light {
   background: #efefef;
   color: #333;
@@ -39,7 +43,7 @@ body {
 
 /* ============================ HEADER STYLE ======================== */
 header {
-  width: 90vw;
+  width: 100%;
   margin: auto; }
   header .settings {
     display: flex;
@@ -65,7 +69,7 @@ header {
         z-index: 10;
         padding: 12px 16px;
         right: 0; }
-        header .settings .dropdown-menu .dropdown-items a {
+        header .settings .dropdown-menu .dropdown-items p {
           padding: 12px 16px;
           text-decoration: none;
           display: block;
@@ -108,6 +112,7 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   transition: all 300ms; }
 
 .hero {
@@ -252,7 +257,7 @@ main {
 
 /* ==============SKILSS ================ */
 .skilss-container {
-  width: 90vw;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -275,65 +280,68 @@ main {
     .skilss-container .container .section-content {
       width: 100%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
       margin-top: 5rem; }
-      .skilss-container .container .section-content .skilss-text {
+      @media (min-width: 1080px) {
+        .skilss-container .container .section-content {
+          flex-direction: row; } }
+  .skilss-container .skilss-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5rem;
+    align-self: flex-start; }
+    .skilss-container .skilss-text .skilss-cont {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+      width: 100%;
+      height: 100%;
+      cursor: default; }
+      .skilss-container .skilss-text .skilss-cont .html {
+        background-color: #ff7700; }
+      .skilss-container .skilss-text .skilss-cont .css {
+        background-color: #38a2f8; }
+      .skilss-container .skilss-text .skilss-cont .react {
+        background-color: #00e1ff; }
+      .skilss-container .skilss-text .skilss-cont .sass {
+        background-color: #ee6aee; }
+      .skilss-container .skilss-text .skilss-cont .tailwind {
+        background-color: #5cbce9;
+        color: #1d1d1d; }
+      .skilss-container .skilss-text .skilss-cont span {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-left: 5rem;
-        align-self: flex-start; }
-        .skilss-container .container .section-content .skilss-text .skilss-cont {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          grid-gap: 20px;
-          width: 100%;
-          height: 100%;
-          cursor: default; }
-          .skilss-container .container .section-content .skilss-text .skilss-cont .html {
-            background-color: #ff7700; }
-          .skilss-container .container .section-content .skilss-text .skilss-cont .css {
-            background-color: #38a2f8; }
-          .skilss-container .container .section-content .skilss-text .skilss-cont .react {
-            background-color: #00e1ff; }
-          .skilss-container .container .section-content .skilss-text .skilss-cont .sass {
-            background-color: #ee6aee; }
-          .skilss-container .container .section-content .skilss-text .skilss-cont .tailwind {
-            background-color: #5cbce9;
-            color: #1d1d1d; }
-          .skilss-container .container .section-content .skilss-text .skilss-cont span {
-            width: 100%;
-            height: 3rem;
-            background-color: #f0cb35;
-            border-radius: 5px;
-            text-align: center;
-            line-height: 3rem;
-            color: #1d1d1d; }
-            .skilss-container .container .section-content .skilss-text .skilss-cont span > i {
-              color: #1d1d1d; }
-            .skilss-container .container .section-content .skilss-text .skilss-cont span img {
-              height: 20px;
-              transform: translateY(3px); }
-        .skilss-container .container .section-content .skilss-text p {
-          font-size: 1.2rem;
-          margin-bottom: 30px; }
-      .skilss-container .container .section-content .skilss-img {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin: auto; }
-        .skilss-container .container .section-content .skilss-img .slide {
-          display: none;
-          -webkit-animation: fade;
-          animation: fade;
-          -webkit-animation-duration: 1s;
-          animation-duration: 1s; }
+        height: 3rem;
+        background-color: #f0cb35;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 3rem;
+        color: #1d1d1d; }
+        .skilss-container .skilss-text .skilss-cont span > i {
+          color: #1d1d1d; }
+        .skilss-container .skilss-text .skilss-cont span img {
+          height: 20px;
+          transform: translateY(3px); }
+    .skilss-container .skilss-text p {
+      font-size: 1.2rem;
+      margin-bottom: 30px; }
+  .skilss-container .skilss-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto; }
+    .skilss-container .skilss-img .slide {
+      display: none;
+      -webkit-animation: fade;
+      animation: fade;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s; }
 
 @-webkit-keyframes fade {
   from {
@@ -346,14 +354,13 @@ main {
     opacity: .4; }
   to {
     opacity: 1; } }
-        .skilss-container .container .section-content .skilss-img img {
-          width: 680px;
-          height: 480px; }
+    .skilss-container .skilss-img img {
+      width: 680px;
+      height: 480px; }
 
 /* ==============PRojects ==================== */
 .projects-cont {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -361,7 +368,6 @@ main {
   margin: auto; }
   .projects-cont .container {
     width: 90%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -381,7 +387,6 @@ main {
       margin-top: 5rem; }
       .projects-cont .container .section-content .card-container {
         width: 100%;
-        height: 100vh;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 40px;
@@ -390,7 +395,8 @@ main {
           width: 20rem;
           height: 30rem;
           border-radius: 10px;
-          background-color: #373737ef;
+          background-image: linear-gradient(to bottom, #a4c7e0, #35a3b4);
+          box-shadow: 0px 0px 8px 2px #bbbbbb;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -406,11 +412,10 @@ main {
             .projects-cont .container .section-content .card-container .card .card-img img {
               width: 320px;
               height: 240px;
-              border-radius: 5px 5px 0 0; }
+              border-radius: 3px; }
           .projects-cont .container .section-content .card-container .card .card-info {
-            margin-top: 20px;
             width: 85%;
-            height: 25%;
+            height: 30%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -433,7 +438,7 @@ main {
                 font-weight: 500;
                 margin-bottom: 5px; }
 
-/* ==============Contact ================ */
+/* ================CONTACT ================ */
 .contact-section {
   width: 100%;
   height: 100vh;
@@ -441,77 +446,80 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto; }
+  margin: auto;
+  margin-top: 5rem;
+  background-image: url("https://images.unsplash.com/photo-1653717672421-ea07d5496ae2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
   .contact-section .container {
-    width: 90%;
-    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    .contact-section .container h2 {
+    .contact-section .container .contact-info h2 {
       font-size: 3rem;
       font-weight: bold;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      text-align: center;
+      color: #dedede; }
+    .contact-section .container .contact-info p {
+      font-size: 1.2rem;
+      color: #dedede; }
     .contact-section .container .contact-form {
       width: 90%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
       margin-top: 5rem; }
       .contact-section .container .contact-form form {
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 5rem; }
+        width: 50%; }
         .contact-section .container .contact-form form .form-group {
-          width: 100%; }
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center; }
           .contact-section .container .contact-form form .form-group .form-control {
             width: 100%;
             height: 3rem;
             border-radius: 5px;
-            border: 1px solid #696969;
+            border: 1px solid #bbbbbb;
             padding: 0 10px;
             font-size: 1rem;
             font-weight: 500;
             margin-bottom: 10px; }
           .contact-section .container .contact-form form .form-group textarea {
-            resize: none;
+            width: 100%;
             height: 5rem;
             border-radius: 5px;
-            border: 1px solid #696969;
-            padding: 10px;
+            border: 1px solid #bbbbbb;
+            padding: 0 10px;
             font-size: 1rem;
             font-weight: 500;
-            width: 100%; }
-        .contact-section .container .contact-form form button {
+            margin-bottom: 10px;
+            resize: none; }
+        .contact-section .container .contact-form form .submitBtn {
           width: 100%;
           height: 3rem;
           border-radius: 5px;
-          border: 1px solid #696969;
-          background-color: #417fd0;
+          border: 0px;
+          background-color: #376cc8;
           color: #fff;
           font-size: 1.2rem;
           font-weight: 500;
+          margin-bottom: 10px;
           transition: all 0.3s;
-          margin-top: 10px; }
-          .contact-section .container .contact-form form button:hover {
-            background-color: #3e91ef; }
-      .contact-section .container .contact-form .contact-direct .contact-direct-item {
-        width: 100%;
-        text-align: center; }
-        .contact-section .container .contact-form .contact-direct .contact-direct-item p {
-          font-size: 1.1rem;
-          margin-bottom: 15px; }
-        .contact-section .container .contact-form .contact-direct .contact-direct-item i {
-          font-size: 1.1rem; }
-        .contact-section .container .contact-form .contact-direct .contact-direct-item span {
-          font-size: 1.1rem; }
+          cursor: pointer; }
+          .contact-section .container .contact-form form .submitBtn:hover {
+            background-color: #3888e3; }
+        .contact-section .container .contact-form form label {
+          color: #dedede;
+          padding: 3px 0;
+          font-size: 1rem; }
 
 /* =============FOOTER ================= */
 footer {
@@ -526,6 +534,10 @@ footer {
   font-size: 1.1rem;
   text-align: center;
   position: relative; }
+  footer .footer-social-link i {
+    font-size: 1.5rem;
+    color: #dedede;
+    margin: 20px 10px; }
 
 .topBtn {
   cursor: pointer;
@@ -539,4 +551,4 @@ footer {
   background-color: transparent;
   font-size: 2.3rem; }
   .topBtn i {
-    color: #2e2e2e; }
+    color: rgba(149, 149, 149, 0.691); }

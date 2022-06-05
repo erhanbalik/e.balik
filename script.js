@@ -1,4 +1,4 @@
-const langData = {
+/* const langData = {
     'en': {
         'whoami': 'Who am I?',
         'skilss': 'Skills',
@@ -11,18 +11,25 @@ const langData = {
         'contact': 'Iletisim',
         'projects': 'Projeler',
     }
-}
+} */
 
 // Theme Toggle
 const modeBtn = document.querySelector('.mode-changer');
 // Language Toggle
 const langEl = document.querySelector('.dropdown-items');
-const link = document.querySelectorAll('a');
+const link = document.querySelectorAll('p');
 const whoEl = document.querySelector('.whoami');
+const whoTitle = document.querySelector('.whoami-title');
+const whoamiDesc = document.querySelector('.whoami-desc');
 const skilssEl = document.querySelector('.skilss');
 const projEl = document.querySelector('.projects');
 const contEl = document.querySelector('.contact');
 const langText = document.querySelector('.lang-text');
+const skilssTitle = document.querySelector('.skilss-title');
+const projectTitle = document.querySelector('.project-title');
+const contactTitle = document.querySelector('.contact-title');
+const footerDesc = document.querySelector('.footer-desc');
+const footerDate = document.querySelector('.footer-date');
 
 // Scroll to Top Function
 topBtn = document.getElementById("scrollBtn");
@@ -64,15 +71,22 @@ link.forEach(el => {
 
         const attr = el.getAttribute('lang');
         whoEl.textContent = langData[attr].whoami;
+        whoTitle.textContent = langData[attr].whoami;
+        whoamiDesc.textContent = langData[attr].whoamiDesc;
         skilssEl.textContent = langData[attr].skilss;
+        skilssTitle.textContent = langData[attr].skilss;
         projEl.textContent = langData[attr].projects;
+        projectTitle.textContent = langData[attr].projects;
         contEl.textContent = langData[attr].contact;
+        contactTitle.textContent = langData[attr].contact;
+        footerDesc.textContent = langData[attr].footerDesc;
+        footerDate.textContent = langData[attr].footerDate;
         langText.textContent = attr.toUpperCase();
     });
 });
 
-//  Theme Toggle Function
 
+//  Theme Toggle Function
 modeBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark');
 });
