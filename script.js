@@ -12,6 +12,7 @@ const langData = {
         'projects': 'Projeler',
     }
 }
+
 // Theme Toggle
 const modeBtn = document.querySelector('.mode-changer');
 // Language Toggle
@@ -23,6 +24,39 @@ const projEl = document.querySelector('.projects');
 const contEl = document.querySelector('.contact');
 const langText = document.querySelector('.lang-text');
 
+// Scroll to Top Function
+topBtn = document.getElementById("scrollBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction(){
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+}
+
+function scrollTopFuntion() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+// Slide show effect function
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 3000);
+}
+// Language Toggle Function
 link.forEach(el => {
     el.addEventListener('click', () => {
         langEl.querySelector('.active').classList.remove('active');
@@ -38,6 +72,7 @@ link.forEach(el => {
 });
 
 //  Theme Toggle Function
+
 modeBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark');
 });
