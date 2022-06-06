@@ -10,7 +10,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px; }
+  font-size: 14px;
+  overflow-x: hidden; }
 
 /* Themes */
 .light {
@@ -22,6 +23,9 @@ body {
   .light i {
     color: #333;
     transition: all 300ms; }
+  .light .smallmenuList {
+    background-color: #efefef;
+    color: #333; }
 
 .dark {
   background: #212833;
@@ -40,6 +44,9 @@ body {
     background-color: #0e0e0e; }
   .dark .topBtn i {
     color: #dedede; }
+  .dark .smallmenuList {
+    background-color: #212833;
+    color: #dedede; }
 
 /* ============================ HEADER STYLE ======================== */
 header {
@@ -49,7 +56,8 @@ header {
     display: flex;
     width: 10vw;
     justify-content: flex-end;
-    align-items: center; }
+    align-items: center;
+    margin-right: 1.5rem; }
     header .settings button {
       background: none;
       border: 0; }
@@ -57,44 +65,40 @@ header {
         font-size: 1.2rem;
         cursor: pointer; }
     header .settings .dropdown-menu {
-      position: relative;
-      display: inline-block;
-      padding: 0 20px;
-      cursor: pointer; }
-      header .settings .dropdown-menu .dropdown-items {
-        position: absolute;
-        display: none;
-        min-width: 160px;
-        box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.3);
-        z-index: 10;
-        padding: 12px 16px;
-        right: 0; }
-        header .settings .dropdown-menu .dropdown-items p {
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block;
-          text-align: left;
-          transition: all 600ms; }
-        header .settings .dropdown-menu .dropdown-items .active {
-          background: #375c7296; }
-      header .settings .dropdown-menu:hover .dropdown-items {
-        display: block; }
+      margin: 0 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      header .settings .dropdown-menu button {
+        cursor: pointer;
+        margin: 0 5px; }
+        header .settings .dropdown-menu button img {
+          width: 2rem;
+          height: 2rem;
+          align-self: center; }
   header .container {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto; }
-    header .container nav ul {
-      display: flex;
+    margin: 0 auto;
+    position: relative; }
+    header .container #branding {
+      margin-left: 2rem; }
+    header .container .menuList .menuItems {
+      display: none;
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
       width: 100%;
       height: 100%;
       list-style: none; }
-      header .container nav ul a {
+      @media (min-width: 768px) {
+        header .container .menuList .menuItems {
+          display: flex; } }
+      header .container .menuList .menuItems a {
         text-decoration: none;
         font-size: 14px;
         font-weight: bold;
@@ -103,6 +107,56 @@ header {
         flex-direction: row;
         align-items: center;
         justify-content: center; }
+    header .container .menu-container {
+      display: block;
+      margin-left: 20px;
+      margin-right: 1rem; }
+      @media (min-width: 768px) {
+        header .container .menu-container {
+          display: none; } }
+      header .container .menu-container i {
+        font-size: 1.3rem;
+        cursor: pointer; }
+    header .container .menuShow {
+      transform: translateX(0) !important;
+      box-shadow: 0px 7px 14px 6px rgba(0, 0, 0, 0.681);
+      right: 0;
+      z-index: 99999;
+      transition: all 300ms;
+      top: 2rem;
+      width: 100%;
+      height: 35vh;
+      list-style: none;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    header .container .smallmenuList {
+      right: 0;
+      transform: translateX(200%);
+      transition: all 300ms;
+      top: 2rem;
+      width: 100%;
+      height: 35vh;
+      list-style: none;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      @media (min-width: 768px) {
+        header .container .smallmenuList {
+          display: none; } }
+      header .container .smallmenuList .smallmenuItems {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%; }
+        header .container .smallmenuList .smallmenuItems a {
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: bold;
+          padding: 10px; }
 
 /* ======HERO ======= */
 .hero-section {
@@ -112,8 +166,11 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   transition: all 300ms; }
+  @media (min-width: 768px) {
+    .hero-section {
+      background-attachment: fixed; } }
 
 .hero {
   width: 100%;
@@ -210,7 +267,7 @@ main {
     justify-content: center;
     align-items: center; }
     main .whoami .container {
-      width: 90%;
+      width: 95%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -224,17 +281,24 @@ main {
     main .whoami .section-content {
       width: 100%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column-reverse;
       align-items: center;
       justify-content: center;
       margin-top: 30px; }
+      @media (min-width: 768px) {
+        main .whoami .section-content {
+          flex-direction: row; } }
     main .whoami .whoami-text {
-      width: 70rem;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-right: 50px; }
+      margin-top: 5rem; }
+      @media (min-width: 768px) {
+        main .whoami .whoami-text {
+          margin-top: 0;
+          margin-right: 1rem; } }
       main .whoami .whoami-text p {
         font-size: 1.2rem;
         margin-bottom: 30px; }
@@ -252,8 +316,18 @@ main {
           border-radius: 50px;
           font-size: 1.1rem; }
     main .whoami .whoami-img {
-      width: 20rem;
-      height: 20rem; }
+      width: 30rem;
+      height: 30rem; }
+      main .whoami .whoami-img img {
+        height: 100%;
+        margin-left: 10%; }
+        @media (min-width: 768px) {
+          main .whoami .whoami-img img {
+            margin-left: 0; } }
+      @media (min-width: 992px) {
+        main .whoami .whoami-img {
+          width: 20rem;
+          height: 20rem; } }
 
 /* ==============SKILSS ================ */
 .skilss-container {
@@ -288,13 +362,18 @@ main {
         .skilss-container .container .section-content {
           flex-direction: row; } }
   .skilss-container .skilss-text {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 5rem;
-    align-self: flex-start; }
+    margin-left: 0;
+    margin-top: 3rem; }
+    @media (min-width: 1080px) {
+      .skilss-container .skilss-text {
+        margin-left: 5rem;
+        margin-top: 0;
+        align-self: flex-start; } }
     .skilss-container .skilss-text .skilss-cont {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -379,7 +458,7 @@ main {
       letter-spacing: 2px;
       margin-bottom: 20px; }
     .projects-cont .container .section-content {
-      width: 90%;
+      width: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;

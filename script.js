@@ -1,23 +1,9 @@
-/* const langData = {
-    'en': {
-        'whoami': 'Who am I?',
-        'skilss': 'Skills',
-        'contact': "Let's Contact",
-        'projects': 'Projects',
-    },
-    'tr': {
-        'whoami': 'Ben kimim?',
-        'skilss': 'Yetenekler',
-        'contact': 'Iletisim',
-        'projects': 'Projeler',
-    }
-} */
 
 // Theme Toggle
 const modeBtn = document.querySelector('.mode-changer');
 // Language Toggle
-const langEl = document.querySelector('.dropdown-items');
-const link = document.querySelectorAll('p');
+const engEl = document.getElementById('eng');
+const turEl = document.getElementById('tur');
 const whoEl = document.querySelector('.whoami');
 const whoTitle = document.querySelector('.whoami-title');
 const whoamiDesc = document.querySelector('.whoami-desc');
@@ -28,8 +14,6 @@ const langText = document.querySelector('.lang-text');
 const skilssTitle = document.querySelector('.skilss-title');
 const projectTitle = document.querySelector('.project-title');
 const contactTitle = document.querySelector('.contact-title');
-const footerDesc = document.querySelector('.footer-desc');
-const footerDate = document.querySelector('.footer-date');
 
 // Scroll to Top Function
 topBtn = document.getElementById("scrollBtn");
@@ -47,6 +31,17 @@ function scrollTopFuntion() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+/* SMALL SCREEN MENU OPENER */
+const menuIcon = document.querySelector('.menu-icon');
+menuIcon.addEventListener('click', () => {
+    document.querySelector('.smallmenuList').classList.toggle('menuShow');
+});
+
+function toggleMenuIcon (x){
+    x.classList.toggle('fa-indent');
+    x.classList.toggle('fa-outdent');
+
+}
 
 // Slide show effect function
 let slideIndex = 0;
@@ -63,13 +58,11 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";
     setTimeout(showSlides, 3000);
 }
-// Language Toggle Function
-link.forEach(el => {
-    el.addEventListener('click', () => {
-        langEl.querySelector('.active').classList.remove('active');
-        el.classList.add('active');
 
-        const attr = el.getAttribute('lang');
+// Language Toggle Function
+
+engEl.addEventListener('click', () => {
+        const attr = engEl.getAttribute('lang');
         whoEl.textContent = langData[attr].whoami;
         whoTitle.textContent = langData[attr].whoami;
         whoamiDesc.textContent = langData[attr].whoamiDesc;
@@ -79,11 +72,20 @@ link.forEach(el => {
         projectTitle.textContent = langData[attr].projects;
         contEl.textContent = langData[attr].contact;
         contactTitle.textContent = langData[attr].contact;
-        footerDesc.textContent = langData[attr].footerDesc;
-        footerDate.textContent = langData[attr].footerDate;
-        langText.textContent = attr.toUpperCase();
     });
-});
+
+turEl.addEventListener('click', () => {
+        const attr = turEl.getAttribute('lang');
+        whoEl.textContent = langData[attr].whoami;
+        whoTitle.textContent = langData[attr].whoami;
+        whoamiDesc.textContent = langData[attr].whoamiDesc;
+        skilssEl.textContent = langData[attr].skilss;
+        skilssTitle.textContent = langData[attr].skilss;
+        projEl.textContent = langData[attr].projects;
+        projectTitle.textContent = langData[attr].projects;
+        contEl.textContent = langData[attr].contact;
+        contactTitle.textContent = langData[attr].contact;
+    });
 
 
 //  Theme Toggle Function
