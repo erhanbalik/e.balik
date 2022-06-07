@@ -17,16 +17,16 @@
             </div>
             <nav class="menuList">
                 <ul class="menuItems">
-                    <li><a href="#whoami" class="whoami">Who am i</a></li>
-                    <li><a href="#skilss" class="skilss">Skilss</a></li>
+                    <li><a href="#whoami" class="whoami">About Me</a></li>
+                    <li><a href="#skilss" class="skilss">Coding</a></li>
                     <li><a href="#projects" class="projects">Projects</a></li>
                     <li><a href="#contact" class="contact">Let's Contact</a></li>
                 </ul>
             </nav>
             <div class="settings">
                 <div class="dropdown-menu">
-                        <button id="eng" lang="en" ><img src="https://img.icons8.com/color/48/undefined/great-britain.png"/></button>
-                        <button id="tur" lang="tr"><img src="https://img.icons8.com/color/48/undefined/turkey.png"/></button>
+                        <button id="eng" onclick="changeLang('en')"><img src="https://img.icons8.com/color/48/undefined/great-britain.png"/></button>
+                        <button id="tur"onclick="changeLang('tr')"><img src="https://img.icons8.com/color/48/undefined/turkey.png"/></button>
                 </div>
                 <button class="mode-changer">
                     <i class="fa-solid fa-moon" onclick="toggleModeIcon(this)"></i>
@@ -39,8 +39,8 @@
             </div>
             <nav class="smallmenuList">
                 <ul class="smallmenuItems">
-                    <li><a href="#whoami" class="whoami">Who am i</a></li>
-                    <li><a href="#skilss" class="skilss">Skilss</a></li>
+                    <li><a href="#whoami" class="whoami">About Me</a></li>
+                    <li><a href="#skilss" class="skilss">Coding</a></li>
                     <li><a href="#projects" class="projects">Projects</a></li>
                     <li><a href="#contact" class="contact">Let's Contact</a></li>
                 </ul>
@@ -78,15 +78,16 @@
                 </div>
                 <div class="section-content">
                     <div class="whoami-text">
+                        <h2 class="who-title">Hello this is Erhan </h2>
                         <p class="whoami-desc">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam, culpa ea molestias aliquid nihil quidem quis iste debitis a temporibus quam, excepturi animi, voluptatibus fugiat unde. Eveniet dolor incidunt laboriosam enim quaerat asperiores laudantium eligendi, temporibus voluptate minus quam ratione fugit soluta provident saepe voluptatem quas magni facere quidem tenetur. Non modi eligendi atque quam aliquam doloremque quasi aperiam ducimus sed nobis repellat rerum vitae dolor culpa et, saepe necessitatibus quisquam? Adipisci deleniti accusantium rerum veniam doloremque soluta aut, aliquid dolor fugit omnis atque facere sunt alias rem labore nam quae deserunt quos. Asperiores soluta ipsam dolores itaque voluptate!
                         </p>
                         <div class="social-icons">
-                            <a href="./assets/resume/ERHAN BALIK.pdf" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square">Resume</i></a>
+                            <a href="./assets/resume/ERHAN BALIK.pdf" target="_blank" class="resumeText">Resume</a><i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </div>
                     </div>
                     <div class="whoami-img">
-                        <img src="./assets/images/erhan.jpeg" alt="erhan">
+                        <img src="./assets/images/m5nss3LA_400x400.jpg" alt="erhan">
                     </div>
                 </div>
             </div>
@@ -130,6 +131,8 @@
         </div>
     </section>
     <!-- =======================================SKILSS END ============================================ -->
+
+    <!-- =======================================Projects SECTION ============================================ -->
     <section class="projects-cont" id="projects">
         <div class="container">
             <div class="section-title">
@@ -153,9 +156,9 @@
                                 <span>Auth0</span>
                             </div>
                             <div class="card-link">
-                                <a href="#" target="_blank">Live Page
+                                <a href="https://car-info.netlify.app/" target="_blank">Live Page
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <a href="#" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
+                                <a href="https://github.com/erhanbalik/car_review" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -172,9 +175,9 @@
                                 <span></span>
                             </div>
                             <div class="card-link">
-                                <a href="#" target="_blank">Live Page
+                                <a href="https://vega-games.vercel.app/" target="_blank">Live Page
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <a href="#" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
+                                <a href="https://github.com/erhanbalik/vega_games" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -194,9 +197,9 @@
                                 <span>Cyrypto Coin API</span>
                             </div>
                             <div class="card-link">
-                                <a href="#" target="_blank">Live Page
+                                <a href="https://cyborgnews.vercel.app/" target="_blank">Live Page
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <a href="#" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
+                                <a href="https://github.com/erhanbalik/ReactJS-Projects/tree/main/12_blockchain_news" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -217,13 +220,13 @@
                             <div class="card-link">
                                 <a href="#" target="_blank">Live Page
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <a href="#" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
+                                <a href="https://github.com/erhanbalik/olivia-pro" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-img">
-                            <img src="./assets/projects/cyborgnews.png" alt="cyborgnews">
+                            <img src="./assets/projects/jokeme.png" alt="joke">
                         </div>
                         <div class="card-info">
                             <div class="card-text">
@@ -236,30 +239,30 @@
                                 <span></span>
                             </div>
                             <div class="card-link">
-                                <a href="#" target="_blank">Live Page
+                                <a href="https://jokegenerator-eta.vercel.app/" target="_blank">Live Page
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <a href="#" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
+                                <a href="https://github.com/erhanbalik/VanillaJS-projects/tree/main/Joke_Generator" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-img">
-                            <img src="./assets/projects/vegalabs.png" alt="cyborgnews">
+                            <img src="./assets/projects/diningmenu.png" alt="menu">
                         </div>
                         <div class="card-info">
                             <div class="card-text">
-                                <h4>Vega Labs</h4>
+                                <h4>Dining Menu</h4>
                                 <p>
                                     Javascript
                                 </p>
-                                <span>Joke API /</span>
-                                <span>Vanilla JS /</span>
-                                <span>Scss</span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
                             <div class="card-link">
-                                <a href="#" target="_blank">Live Page
+                                <a href="https://dining-menu.vercel.app/" target="_blank">Live Page
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <a href="#" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
+                                <a href="https://github.com/erhanbalik/VanillaJS-projects/tree/main/Restaurant_Menu" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -278,62 +281,38 @@
                                 <span></span>
                             </div>
                             <div class="card-link">
-                                <a href="#" target="_blank">Live Page
+                                <a href="https://veganfts.vercel.app/" target="_blank">Live Page
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <a href="#" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="./assets/projects/landify.png" alt="cyborgnews">
-                        </div>
-                        <div class="card-info">
-                            <div class="card-text">
-                                <h4>Landify</h4>
-                                <p>
-                                    HTML / CSS
-                                </p>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="card-link">
-                                <a href="#" target="_blank">Live Page
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <a href="#" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
+                                <a href="https://github.com/erhanbalik/vegaNFT" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                     </div>
             </div>
         </div>
     </section>
+    <!-- ==========================Projects END ================================== -->
 
     <!-- ==========================CONTACT================================== -->
     <section class="contact-section" id="contact">
         <div class="container">
             <div class="contact-info">
                 <h2 class="contact-title">Let's Contact</h2>
-                <p>
-                    If you have any questions, please feel free to contact me.
-                </p>
-                
                 </div>
                 <div class="contact-form">
                     <form action="https://formsubmit.co/formsubmit.rdy8w@aleeas.com" method="POST"">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" name="name" class="form-control" id="name" required placeholder="Enter your name">
+                            <input type="text" name="name" class="form-control" id="name" required placeholder="Name">
                             <input type="hidden" name="_template" value="table">
                             <input type="hidden" name="_captcha" value="false">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" name="email" class="form-control" id="email" required placeholder="Enter your email">
+                            <input type="email" name="email" class="form-control" id="email" required placeholder="E-mail">
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea name="message" class="form-textarea" id="message" placeholder="Type Message" required rows="3"></textarea>
+                            <textarea name="message" class="form-textarea" id="message" placeholder="Message" required rows="3"></textarea>
                         </div>
                         <button type="submit" class="submitBtn">Submit</button>
                     </form>

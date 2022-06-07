@@ -14,6 +14,8 @@ const langText = document.querySelector('.lang-text');
 const skilssTitle = document.querySelector('.skilss-title');
 const projectTitle = document.querySelector('.project-title');
 const contactTitle = document.querySelector('.contact-title');
+const resumetext = document.querySelector('.resumeText');
+const whoamiTitle = document.querySelector('.who-title');
 
 // Scroll to Top Function
 topBtn = document.getElementById("scrollBtn");
@@ -59,35 +61,6 @@ function showSlides() {
     setTimeout(showSlides, 3000);
 }
 
-// Language Toggle Function
-
-engEl.addEventListener('click', () => {
-        const attr = engEl.getAttribute('lang');
-        whoEl.textContent = langData[attr].whoami;
-        whoTitle.textContent = langData[attr].whoami;
-        whoamiDesc.textContent = langData[attr].whoamiDesc;
-        skilssEl.textContent = langData[attr].skilss;
-        skilssTitle.textContent = langData[attr].skilss;
-        projEl.textContent = langData[attr].projects;
-        projectTitle.textContent = langData[attr].projects;
-        contEl.textContent = langData[attr].contact;
-        contactTitle.textContent = langData[attr].contact;
-    });
-
-turEl.addEventListener('click', () => {
-        const attr = turEl.getAttribute('lang');
-        whoEl.textContent = langData[attr].whoami;
-        whoTitle.textContent = langData[attr].whoami;
-        whoamiDesc.textContent = langData[attr].whoamiDesc;
-        skilssEl.textContent = langData[attr].skilss;
-        skilssTitle.textContent = langData[attr].skilss;
-        projEl.textContent = langData[attr].projects;
-        projectTitle.textContent = langData[attr].projects;
-        contEl.textContent = langData[attr].contact;
-        contactTitle.textContent = langData[attr].contact;
-    });
-
-
 //  Theme Toggle Function
 modeBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark');
@@ -95,4 +68,36 @@ modeBtn.addEventListener('click', () => {
 // Theme Icon Toggle Function
 function toggleModeIcon (x) {
     x.classList.toggle('fa-sun');
+}
+// Language Toggle Function
+const changeLang = (langCode) => {
+    document.documentElement.setAttribute('lang', langCode);
+    const attr = document.documentElement.getAttribute('lang');
+    
+    if (langCode === 'en') {
+        whoEl.textContent = langData[attr].whoami;
+        whoTitle.textContent = langData[attr].whoami;
+        whoamiDesc.textContent = langData[attr].whoamiDesc;
+        skilssEl.textContent = langData[attr].skilss;
+        skilssTitle.textContent = langData[attr].skilss;
+        projEl.textContent = langData[attr].projects;
+        projectTitle.textContent = langData[attr].projects;
+        contEl.textContent = langData[attr].contact;
+        contactTitle.textContent = langData[attr].contact;
+        resumetext.textContent = langData[attr].resume;
+        whoamiTitle.textContent = langData[attr].whoamiTitle;
+        
+    } else if (langCode === 'tr') {
+        whoEl.textContent = langData[attr].whoami;
+        whoTitle.textContent = langData[attr].whoami;
+        whoamiDesc.textContent = langData[attr].whoamiDesc;
+        skilssEl.textContent = langData[attr].skilss;
+        skilssTitle.textContent = langData[attr].skilss;
+        projEl.textContent = langData[attr].projects;
+        projectTitle.textContent = langData[attr].projects;
+        contEl.textContent = langData[attr].contact;
+        contactTitle.textContent = langData[attr].contact;
+        resumetext.textContent = langData[attr].resume;
+        whoamiTitle.textContent = langData[attr].whoamiTitle;
+    }
 }
