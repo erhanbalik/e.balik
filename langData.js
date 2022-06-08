@@ -1,22 +1,22 @@
 const langData = {
     'en': {
         'whoami': 'About Me',
-        'whoamiTitle': 'Hello this is Erhan',
+        'whoamiTitle': 'Hi',
         'skilss': 'Coding',
         'contact': "Let's Contact",
         'projects': 'Projects',
         'resume': 'Resume',
         'footerDate': '2022, Turkey',
-        'whoamiDesc': '',
+        'whoamiDesc': "I'm Erhan, a Front-End Developer from Turkey. I have a passion for coding and I love to create new things. I'm a self-taught developer and I'm always looking for new challenges.  I'd been working as a architechtural technician for the last 4 years. Now I'm looking for new opportunities as a developer, and in case I don't see ya, good afternoon, good evening, and good night!",
     },
     'tr': {
         'whoami': 'Hakkımda',
-        'whoamiTitle': 'Selam ben Erhan',
+        'whoamiTitle': 'Selam',
         'resume': 'Özgeçmiş',
         'skilss': 'Kodlama',
         'contact': 'İletisim',
         'projects': 'Projelerim',
         'footerDate': '2022, Türkiye',
-        'whoamiDesc': '10 yıldan beridir bilgi teknolojileri alanında kendimi geliştiriyorum. Daha önce farklı kodlama dilleri ile uğraştım Python ve C# gibi. Fakat Front-End alanını kendime daha yakın buldum ve son 1.5 yıldan beri projelerimi geliştiriyorum. Geliştirdiğim projelerimi GitHub üzerinden paylaşıyorum. ',
+        'whoamiDesc': 'Ben Erhan, Front-End Developer olarak kendimi geliştiriyorum. Kodlama ve yeni teknolojileri yakından takip edip uyguluyorum. Modern web tasarım diliyle projelerimi geliştiriyorum. Projelerimi çogunlukla ReactJs kullanarak geliştiriyorum. Hedefim kariyerime iyi bir front-end developer olarak devam etmek.',
     }
 }
